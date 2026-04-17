@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Barcelona Shop - Tran Phuoc Vinh</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+    <img src="images/logo.png" alt="Logo Barca">
+    <span>BARCA SHOP</span>
+</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Áo sân nhà</a></li>
+                    <li><a href="#">Áo sân khách</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>MÙA GIẢI 2025/2026</h1>
+        <p>Trang phục thi đấu chính thức của Gã khổng lồ xứ Catalan</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Sản phẩm mới nhất</h2>
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="images/khanquang.jpg" alt="Khăn choàng">
+                </div>
+                <h3>Khăn Choàng Cổ Barca</h3>
+                <p class="price">450.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="images/sankhach.png" alt="Áo sân khách Barca">
+                </div>
+                <h3>Áo Đấu Sân Khách 2025/26</h3>
+                <p class="price">1.850.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-img-container">
+                    <img src="images/sannha.png" alt="Áo sân nhà Barca">
+                </div>
+                <h3>Áo Đấu Sân Nhà 2025/26</h3>
+                <p class="price">1.850.000đ</p>
+                <button class="add-to-cart">Thêm vào giỏ</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Đồ án Website - Sinh viên: Tran Phuoc Vinh - VHU</p>
+    </footer>
+
+    <script>
+        // Code xử lý giỏ hàng nhanh
+        let count = 0;
+        const btns = document.querySelectorAll('.add-to-cart');
+        btns.forEach(btn => {
+            btn.onclick = () => {
+                count++;
+                document.getElementById('cart-count').innerText = count;
+                alert('Đã thêm sản phẩm vào giỏ hàng thành công!');
+            };
+        });
+    </script>
+</body>
+</html>
