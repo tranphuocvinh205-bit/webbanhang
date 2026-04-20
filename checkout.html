@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh toán - Barca Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .checkout-container { display: flex; gap: 30px; margin: 40px 0; }
+        .billing-form { flex: 2; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .order-summary-box { flex: 1; background: #f9f9f9; padding: 20px; border: 1px solid #ddd; border-radius: 8px; height: fit-content; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .form-group input, .form-group select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        .payment-methods { margin: 20px 0; }
+        .btn-confirm { background: #A50044; color: white; border: none; padding: 15px; width: 100%; border-radius: 5px; cursor: pointer; font-size: 1.1rem; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo Barca">
+                <span>BARCA SHOP</span>
+            </div>
+            <nav>
+                <ul><li><a href="index.html">Quay lại cửa hàng</a></li></ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2 style="margin-top: 30px; color: #004D98;">Thông tin thanh toán</h2>
+        <div class="checkout-container">
+            <div class="billing-form">
+                <h3>Chi tiết giao hàng</h3>
+                <div class="form-group">
+                    <label>Họ và tên *</label>
+                    <input type="text" placeholder="Nhập họ tên người nhận">
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại *</label>
+                    <input type="text" placeholder="Số điện thoại liên lạc">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ nhận hàng *</label>
+                    <input type="text" placeholder="Số nhà, tên đường, phường/xã...">
+                </div>
+                <div class="payment-methods">
+                    <h3>Phương thức thanh toán</h3>
+                    <input type="radio" name="payment" checked> Thanh toán khi nhận hàng (COD)<br>
+                    <input type="radio" name="payment"> Chuyển khoản ngân hàng (Napas247)
+                </div>
+            </div>
+
+            <div class="order-summary-box">
+                <h3>Đơn hàng của bạn</h3>
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>Sản phẩm:</span>
+                    <span>3.700.000đ</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>Phí ship:</span>
+                    <span>0đ</span>
+                </div>
+                <hr>
+                <div style="display: flex; justify-content: space-between; margin: 20px 0; font-size: 1.3rem; color: #A50044; font-weight: bold;">
+                    <span>Tổng tiền:</span>
+                    <span>3.700.000đ</span>
+                </div>
+                <button class="btn-confirm" onclick="orderSuccess()">XÁC NHẬN ĐẶT HÀNG</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function orderSuccess() {
+            alert('Chúc mừng bạn đã đặt hàng thành công! Đơn hàng sẽ sớm được giao đến bạn.');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
